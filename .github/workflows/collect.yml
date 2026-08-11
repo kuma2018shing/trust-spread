@@ -1,6 +1,7 @@
 name: collect
 
-on:
+# quoted: bare `on` is a boolean in YAML 1.1, and some parsers read it that way
+"on":
   schedule:
     - cron: "7,37 * * * *"     # twice an hour, offset off the hour
   workflow_dispatch:
